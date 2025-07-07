@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Estudiante</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Editar Estudiante</h1>
+    <form method="POST">
+        <input type="text" name="nombre" value="{{ estudiante[1] }}" required>
+        <input type="number" name="edad" value="{{ estudiante[2] }}" required>
+        <input type="text" name="carrera" value="{{ estudiante[3] }}" required>
+        <input type="email" name="correo" value="{{ estudiante[4] }}" required>
+        <button type="submit" class="btn">Actualizar</button>
+    </form>
+    <a href="/" class="btn">Volver</a>
+</body>
+</html>

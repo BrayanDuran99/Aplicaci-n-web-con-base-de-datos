@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Estudiantes</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Estudiantes</h1>
+    <a href="/add" class="btn">Agregar Estudiante</a>
+    <table>
+        <tr><th>ID</th><th>Nombre</th><th>Edad</th><th>Carrera</th><th>Correo</th><th>Acciones</th></tr>
+        {% for est in estudiantes %}
+        <tr>
+            <td>{{ est[0] }}</td>
+            <td>{{ est[1] }}</td>
+            <td>{{ est[2] }}</td>
+            <td>{{ est[3] }}</td>
+            <td>{{ est[4] }}</td>
+            <td>
+                <a href="/edit/{{ est[0] }}" class="btn">Editar</a>
+                <a href="/delete/{{ est[0] }}" class="btn delete">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
